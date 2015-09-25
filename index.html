@@ -1,0 +1,106 @@
+<html>
+<head>
+<title> Lab 5 </title>
+<script src="processing.js"></script>
+<script type="text/processing" data-processing-target="mycanvas">
+
+PImage lime;
+PImage lemon;
+PImage orange;
+
+void setup(){
+
+size( 699, 800 );
+frameRate( 30 );
+
+lime = loadImage ("images/lime.jpg");
+lemon = loadImage ("images/lemon.jpg");
+orange = loadImage ("images/orange.jpg");
+
+}
+
+
+void draw()
+{
+
+	background(255,255,255);
+	
+	image(lime,170,90,150,150)
+	image(orange,340,79,150,170)
+	image(lemon,0,100,150,150)
+
+	stroke(255,255,0);
+	fill(51,255,255);
+	rect(40,250,60,30);
+	
+	//lemon
+	if (mouseX > 40 && mouseX < 100 && mouseY > 250 && mouseY <280)
+	{
+		stroke (0,0,0);
+		strokeWeight(5);
+		fill(255,0,255);
+		rect(40,250,60,30);
+		fill(0,0,0);
+		text("$30",60,270);
+	}
+	
+	stroke(255,255,0);
+	fill(51,255,255);
+	rect(206,250,60,30);
+	
+	//lime
+	if (mouseX > 206 && mouseX < 266 && mouseY > 250 && mouseY <280)
+	{
+		stroke (0,0,0);
+		strokeWeight(5);
+		fill(255,0,255);
+		rect(206,250,60,30);
+		fill(0,0,0);
+		text("$45",225,270);
+	}
+	
+
+	stroke(255,255,0);
+	fill(51,255,255);
+	rect(400,255,60,30);
+	
+	//orange
+	if (mouseX > 400 && mouseX < 460 && mouseY > 255 && mouseY <285)
+	{
+		stroke (0,0,0);
+		strokeWeight(5);
+		fill(255,0,255);
+		rect(400,255,60,30);
+		fill(0,0,0);
+		text("$35",420,275);
+	}
+	
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	text("$30",60,270);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	text("$45",225,270);
+
+	stroke(0,0,0);
+	fill(0,0,0);
+	text("$30",420,275);
+
+	stroke(0,0,0);
+	strokeWeight(10)
+	fill(255,255,255,0,0);
+	rect(10,60,500,600);
+
+}
+
+</script>
+<canvas id="mycanvas"></canvas>
+</head>
+
+<body>
+
+</body>
+</html>
+
